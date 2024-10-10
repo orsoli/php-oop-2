@@ -25,8 +25,8 @@ $catProductsList = [
 
 // Products list
 $productsList = [
-    $dogProductsList,
-    $catProductsList
+    "dogProducts"=>$dogProductsList,
+    "catProducts"=>$catProductsList
 ]
 
 
