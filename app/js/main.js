@@ -6,5 +6,7 @@ createApp({
   },
   methods: {},
 
-  created() {},
+  created() {
+    console.log("Hello World");
+  },
 }).mount("#app");
