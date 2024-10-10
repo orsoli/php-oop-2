@@ -46,8 +46,12 @@
                     </button>
                     <ul class="dropdown-menu dropdown-menu-dark">
                         <p>Categories:</p>
-                        <li><a class="dropdown-item" href="#">DOG</a></li>
-                        <li><a class="dropdown-item" href="#">CAT</a></li>
+                        <li><a class="dropdown-item" href="#" @click="getDogProductsList">DOG</a></li>
+                        <li><a class="dropdown-item" href="#" @click="getCatProductsList">CAT</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#" @click="getCategoriesList">All Products</a></li>
                     </ul>
                 </div>
             </div>
@@ -60,13 +64,13 @@
                         <div class="card-body">
                             <h5 class="card-title"> {{product.title}} </h5>
                             <p class="card-text">Category:
-                                <span v-for="info in product.category">
-                                    <!-- <img :src="'./img/'info.logoUrl" alt="logo"> -->
-                                    <span> {{info.name}} </span>
-                                </span>
+                                <img :src="'./img/' + product.category.logoUrl"
+                                    class="border border-2 rounded-5 shadow mx-2" style="width: 30px;" alt="logo">
+                                <span> {{product.category.name}} </span>
                             </p>
-                            <p class="card-text">Type: </p>
-                            <p class="card-text">Price: </p>
+                            <p class="card-text">Type: <span class="fw-bold fst-italic">{{product.type}}</span> </p>
+                            <p class="card-text">Price: <span class="fw-bold fst-italic text-danger">{{product.price}}
+                                    $</span> </p>
                             <a href="#" class="btn btn-primary">Add to card</a>
                         </div>
                     </div>

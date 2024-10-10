@@ -12,6 +12,7 @@ createApp({
   },
 
   methods: {
+    // Get api's
     getCategoriesList() {
       axios
         .get(this.apiUrl)
@@ -32,6 +33,16 @@ createApp({
           // always executed
           console.log("API geting successfuly");
         });
+    },
+
+    // Get dog products list
+    getDogProductsList() {
+      this.productsList = this.dogProductsList;
+      console.log(this.productsList);
+    },
+    // Get cat products list
+    getCatProductsList() {
+      this.productsList = this.catProductsList;
     },
   },
 
