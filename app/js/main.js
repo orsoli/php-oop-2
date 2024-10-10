@@ -4,22 +4,25 @@ createApp({
   data() {
     return {
       // Vriables
+      apiUrl: "http://localhost:8888/php-oop-2/index.php", // Api url adress
       productsList: [], // Store the all products list
       dogProductsList: [], // Store the dog products list
       catProductsList: [], // Store the cat products list
     };
   },
-  methods: {
-    getProductsList() {
-      axios
-        .get("http://localhost:8888/php-oop-2/index.php")
-        .then(function (response) {
-          // handle success
-          this.productsList = response.data; // Store all products
-          this.dogProductsList = response.data.dogProducts; // Store dog products
-          this.dogProductsList = response.data.catProducts; // Store dog products
 
-          console.log(response.data.catProducts); // Console Test
+  methods: {
+    getCategoriesList() {
+      axios
+        .get(this.apiUrl)
+        .then((response) => {
+          // handle success
+          this.dogProductsList = response.data.dogProducts; // Store dog products
+          this.catProductsList = response.data.catProducts; // Store dog products
+          // Store all products list
+          this.productsList = this.dogProductsList.concat(this.catProductsList);
+
+          console.log(this.productsList); // Console Test
         })
         .catch(function (error) {
           // handle error
@@ -33,6 +36,6 @@ createApp({
   },
 
   created() {
-    this.getProductsList();
+    this.getCategoriesList();
   },
 }).mount("#app");

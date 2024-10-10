@@ -6,9 +6,9 @@ require_once __DIR__."/../classes/CatProduct.php";
 
 // Dog product List
 $dogProductsList =[
-    new DogProduct("http://www.google.com/url?sa=i&url=https%3A%2F%2Fsuperfeed.lk%2Fpremium-dog-food%2F&psig=AOvVaw3z_R7XTsR1EC0U9-xhLu02&ust=1728662806043000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNjL6_aYhIkDFQAAAAAdAAAAABAE", "Premium Dog Food", "food", 29.99),
-    new DogProduct("http://www.google.com/url?sa=i&url=https%3A%2F%2Fpetshopbyfringestudio.com%2Fcollections%2Frubber-dog-toys&psig=AOvVaw2ZRXYbOkGxCI4AJlcJZTuL&ust=1728662870670000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCICIhqeZhIkDFQAAAAAdAAAAABAK", "Rubber Dog Toy", "toy", 9.99),
-    new DogProduct("http://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nytimes.com%2Fwirecutter%2Freviews%2Fbest-dog-beds%2F&psig=AOvVaw33g6yCKQGhYTXTM_dgRY2g&ust=1728662943516000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOCR6bmZhIkDFQAAAAAdAAAAABAE", "Cozy Dog Bed", "bed", 49.99),
+    new DogProduct("https://img.freepik.com/free-photo/close-up-portrait-yorkshire-dog_23-2151779238.jpg?t=st=1728600121~exp=1728603721~hmac=992deefadb584110057642a8f407fc338036d133aea6113a82cd3d042643f23a&w=2000", "Premium Dog Food", "food", 29.99),
+    new DogProduct("https://img.freepik.com/free-photo/close-up-pet-accessories_23-2150960004.jpg?t=st=1728600157~exp=1728603757~hmac=234a3ef67855c80464a2460c29092b7eeef59f511505d83e5609c8aab06adb8d&w=1480", "Rubber Dog Toy", "toy", 9.99),
+    new DogProduct("https://img.freepik.com/free-photo/high-angle-dog-laying-pillow-home_23-2149636196.jpg?t=st=1728600189~exp=1728603789~hmac=0e8aca3666733330dc5f076ce5df7b2e5cd516a3ce4a252743ec8b93d82687ba&w=1480", "Cozy Dog Bed", "bed", 49.99),
     new DogProduct("http://img.freepik.com/free-photo/cocker-spaniel-plays-games-home_1303-27279.jpg?t=st=1728576610~exp=1728580210~hmac=be1f524d18d44883907862d9f5adb9425dd16d525518f91c4b7b587b08adab0d&w=740", "Interactive Dog Puzzle", "product", 19.99),
     new DogProduct("http://img.freepik.com/free-photo/dog-snacks-shoes_23-2147828963.jpg?t=st=1728576644~exp=1728580244~hmac=a2a46338eaad4954c794bdd0360cd4b0f44e98095fe540a01e61613bd301ee90&w=1480", "Dog Treats Variety Pack", "food", 14.99)
 ];

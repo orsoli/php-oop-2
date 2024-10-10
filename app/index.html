@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="" />
+    <link rel="icon" type="image/png" href="./img/cat-logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Orsol Filaj" />
     <meta name="description" content="PHP OOP 2" />
@@ -20,9 +20,58 @@
 </head>
 
 <body>
-    <main class="bg-body-tertiary">
+    <!-- Header  -->
+
+    <header>
+        <nav class="navbar bg-body-secondary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./img/logo.png" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top border border-1  rounded-3 shadow">
+                    PETHOUSE
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main class="bg-body-tertiary py-5">
         <!-- Container  -->
         <div class="container" id="app">
+            <h1 class="text-center text-danger text-decoration-underline"> PET HOUSE SHOP</h1>
+            <!-- Products and Categories  -->
+            <div class="nav-bar">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Products
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <p>Categories:</p>
+                        <li><a class="dropdown-item" href="#">DOG</a></li>
+                        <li><a class="dropdown-item" href="#">CAT</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Products List  -->
+            <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 border border-1 py-3 my-5 g-5">
+                <div class="col" v-for="(product,i) in productsList" :key="i">
+                    <div class="card rounded-3 shadow">
+                        <img :src="product.image" class="card-img-top" style="height: 300px;object-fit: cover"
+                            alt="image">
+                        <div class="card-body">
+                            <h5 class="card-title"> {{product.title}} </h5>
+                            <p class="card-text">Category:
+                                <span v-for="info in product.category">
+                                    <!-- <img :src="'./img/'info.logoUrl" alt="logo"> -->
+                                    <span> {{info.name}} </span>
+                                </span>
+                            </p>
+                            <p class="card-text">Type: </p>
+                            <p class="card-text">Price: </p>
+                            <a href="#" class="btn btn-primary">Add to card</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </main>

@@ -23,7 +23,7 @@ class CatProduct extends Product{
     public function __construct(string $image, string $title, string $type, int|float $price)
     {
         // Call instructor of Product class with category "Cat" and logo "http"
-        parent::__construct($image,$title,new Category("http","Cat"),$type,$price);
+        parent::__construct($image,$title,new Category("cat-logo.jpg","Cat"),$type,$price);
     }
 }
 
