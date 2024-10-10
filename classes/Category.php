@@ -8,8 +8,8 @@
  * @param string $name Name of the Category
  */
 class Category{
-    protected string $logoUrl;
-    protected string $name;
+    public string $logoUrl;
+    public string $name;
 
     // Construct method
     /**

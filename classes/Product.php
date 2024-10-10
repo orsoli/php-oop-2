@@ -12,11 +12,11 @@ require_once __DIR__."/DogProduct.php";
  * @param int|float $price Product price 
  */
 class Product {
-    protected string $image;
-    protected string $title;
-    protected Category $category;
-    protected string $type;
-    protected int|float $price;
+    public string $image;
+    public string $title;
+    public Category $category;
+    public string $type;
+    public int|float $price;
 
 // Construct method
 /**
