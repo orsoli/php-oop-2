@@ -5,11 +5,6 @@ createApp({
     return {
       // Vriables
       apiUrl: "http://localhost:8888/php-oop-2/index.php", // Api url adress
-      productsList: [], // Store the all products list
-      dogProductsList: [], // Store the dog products list
-      catProductsList: [], // Store the cat products list
-      email: "", // Store email from input
-      submit: false, // Flag
     };
   },
 
@@ -55,7 +50,5 @@ createApp({
     },
   },
 
-  created() {
-    this.getCategoriesList();
-  },
+  created() {},
 }).mount("#app");
