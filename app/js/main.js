@@ -8,6 +8,8 @@ createApp({
       productsList: [], // Store the all products list
       dogProductsList: [], // Store the dog products list
       catProductsList: [], // Store the cat products list
+      email: "", // Store email from input
+      submit: false, // Flag
     };
   },
 
@@ -33,6 +35,13 @@ createApp({
           // always executed
           console.log("API geting successfuly");
         });
+    },
+
+    // Set submiters
+    isSubmit() {
+      if (this.email && this.email.length > 2) {
+        this.submit = true;
+      }
     },
 
     // Get dog products list
