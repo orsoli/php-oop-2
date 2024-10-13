@@ -8,8 +8,8 @@
  * @param string $name Name of the Category
  */
 class Category{
-    public string $logoUrl;
-    public string $name;
+    private string $logoUrl;
+    private string $name;
 
     // Construct method
     /**
@@ -18,15 +18,52 @@ class Category{
      */
     public function __construct(string $logoUrl, string $name)
     {
-        $this->logoUrl = $logoUrl;
-        $this->name = $name;
+        $this->setLogoUrl($logoUrl);
+        $this->setName($name);
     }
 
-    // Get functions
-    public function getLogo(){
+    // Get the value of logoUrl
+
+    /**
+     * Get the value of logoUrl
+     * @return string
+     */
+    public function getLogoUrl(){
         return $this->logoUrl;
     }
+
+    // Set the vale of logoUrls
+    
+    /**
+     * Set the value of logoUrls
+     * @param string
+     * @return self
+     */
+    public function setLogoUrl($logoUrl): self
+    {
+         $this->logoUrl = $logoUrl;
+         return $this;
+    }
+    // Get the value of name
+
+    /**
+     * Get the value of name
+     * @return string
+     */
     public function getName(){
         return $this->name;
+    }
+
+    // Set the vale of name
+    
+    /**
+     * Set the value of name
+     * @param string
+     * @return self
+     */
+    public function setName($name): self
+    {
+         $this->name = $name;
+         return $this;
     }
 }

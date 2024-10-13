@@ -4,23 +4,21 @@ createApp({
   data() {
     return {
       // Vriables
-      apiUrl: "http://localhost:8888/php-oop-2/index.php", // Api url adress
+      allProductsApiUrl:
+        "http://localhost:8888/php-oop-2/api/AllProductsList.php", // Api url adress
+      allProductsList: [], // Store all products
     };
   },
 
   methods: {
     // Get api's
-    getCategoriesList() {
+    getAllProductsList() {
       axios
-        .get(this.apiUrl)
+        .get(this.allProductsApiUrl)
         .then((response) => {
           // handle success
-          this.dogProductsList = response.data.dogProducts; // Store dog products
-          this.catProductsList = response.data.catProducts; // Store dog products
-          // Store all products list
-          this.productsList = this.dogProductsList.concat(this.catProductsList);
-
-          console.log(this.productsList); // Console Test
+          console.log(response.data); // Console Test
+          this.allProductsList = response.data;
         })
         .catch(function (error) {
           // handle error
@@ -31,24 +29,9 @@ createApp({
           console.log("API geting successfuly");
         });
     },
-
-    // Set submiters
-    isSubmit() {
-      if (this.email && this.email.length > 2) {
-        this.submit = true;
-      }
-    },
-
-    // Get dog products list
-    getDogProductsList() {
-      this.productsList = this.dogProductsList;
-      console.log(this.productsList);
-    },
-    // Get cat products list
-    getCatProductsList() {
-      this.productsList = this.catProductsList;
-    },
   },
 
-  created() {},
+  created() {
+    this.getAllProductsList();
+  },
 }).mount("#app");

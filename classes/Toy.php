@@ -8,8 +8,10 @@ require_once __DIR__ ."/Product.php";
  * while other parameters (such as img,title,category,stock,price and description) are flexible.
  */
 class Toy extends Product{
-    public int $size; 
-    public string $material;
+    private string $size; 
+    private string $material;
+    private string $typeName;
+
 
     /**
      * Constructor for the Toy class.
@@ -22,10 +24,81 @@ class Toy extends Product{
      * @param int|float $price Product price 
      * @param string $description Product description
      * */
-    public function __construct(string $image,string $title,Category $category,int $stock,int|float $price,string $description,int $size, string $material)
+    public function __construct(string $image, string $title, Category $category, int $stock, int|float $price, string $description, string $size, string $material, string $typeName)
     {
         parent::__construct($image, $title, $category, $stock, $price, $description);
-        $this->size = $size;
-        $this->material = $material;
+        $this->setSize($size);
+        $this->setMaterial($material);
+        $this->setTypeName($typeName);
     }
+
+    // Get the value of size
+
+    /**
+     * Get the value of size
+     * @return string
+     */
+    public function getSize(){
+        return $this->size;
+    }
+
+    // Set the vale of size
+    
+    /**
+     * Set the value of size
+     * @param string
+     * @return self
+     */
+    public function setSize($size): self
+    {
+         $this->size = $size;
+         return $this;
+    }
+
+    // Get the value of material
+
+    /**
+     * Get the value of material
+     * @return string
+     */
+    public function getMaterial(){
+        return $this->material;
+    }
+
+    // Set the vale of material
+    
+    /**
+     * Set the value of material
+     * @param string
+     * @return self
+     */
+    public function setMaterial($material): self
+    {
+         $this->material = $material;
+         return $this;
+    }
+
+    // Get the value of typeName
+
+    /**
+     * Get the value of typeName
+     * @return string
+     */
+    public function getTypeName(){
+        return $this->typeName;
+    }
+
+    // Set the vale of typeName 
+
+    /**
+     * Set the value of typeName
+     * @param string
+     * @return self
+     */
+    public function setTypeName($typeName): self
+    {
+         $this->typeName = $typeName;
+         return $this;
+    }
+
 }
