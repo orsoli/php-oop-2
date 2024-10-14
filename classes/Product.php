@@ -1,6 +1,5 @@
 <?php
 //Import Files
-require_once __DIR__."/DogProduct.php";
 require_once __DIR__."/Toy.php";
 
 /**
@@ -148,7 +147,7 @@ class Product {
      */
     public function setPrice(int|float $price): self
     {
-        $this->price = $price;
+        $this->price =$price;
         return $this;
     }
 
